@@ -1,0 +1,23 @@
+from random import randint
+i = int(input('Введите количество повторений'))
+a = int(input('Введите первое число'))
+b = int(input('Введите второе число'))
+num1 = randint(a, b)
+spisok = []
+fgh = 0
+len_spisok = i
+for i in range(len_spisok):
+    num1 = randint(a, b)
+    if num1 not in spisok:
+        spisok.append(num1)
+        print(num1)
+    elif num1 in spisok:
+        fgh = 0
+while len(spisok) != i+1:
+    num1 = randint(a, b)
+    if num1 not in spisok:
+        spisok.append(num1)
+        print(num1)
+    elif num1 in spisok:
+        fgh = 0
+print(spisok)
